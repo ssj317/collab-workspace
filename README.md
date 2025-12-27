@@ -107,6 +107,8 @@ MONGO_DB=collab_logs
 JWT_SECRET=your_secret_key
 JWT_EXPIRES_IN=15m
 
+---
+
 
 Running Locally (Without Docker)
 Prerequisites
@@ -128,30 +130,19 @@ Server will start at:
 
 http://localhost:5000
 
-Running with Docker (Recommended)
-Prerequisites
+---
 
-Docker
+## Running with Docker (Recommended)
+-Prerequisites
 
-Docker Compose
+-Docker
 
-Start all services
-docker-compose up --build
+-Docker Compose
+
+-Start all services
+-docker-compose up --build
 
 
-This will start:
-
-API server
-
-PostgreSQL
-
-Redis
-
-MongoDB
-
-Background worker
-
-WebSocket server
 
 
 Real-Time Collaboration (WebSockets)
