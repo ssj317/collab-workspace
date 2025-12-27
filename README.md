@@ -142,67 +142,85 @@ http://localhost:5000
 -Start all services
 -docker-compose up --build
 
+## This will start:
+
+-API server
+
+-PostgreSQL
+
+-Redis
+
+-MongoDB
+
+-Background worker
+
+-WebSocket server
 
 
+---
 
-Real-Time Collaboration (WebSockets)
+## Real-Time Collaboration (WebSockets)
 
-Implemented using Socket.IO
+-Implemented using Socket.IO
 
 Supported events:
 
-user-joined
+-user-joined
 
-user-left
+-user-left
 
-file-change (mocked)
+-file-change (mocked)
 
-cursor-update
+-cursor-update
 
-Redis Pub/Sub enables horizontal scaling
+-Redis Pub/Sub enables horizontal scaling
 
-WebSocket functionality is demonstrated in Docker-based deployments.
+-WebSocket functionality is demonstrated in Docker-based deployments.
+---
 
- Asynchronous Job Processing
+ ## Asynchronous Job Processing
 
-Jobs accepted via REST API
+-Jobs accepted via REST API
 
-Pushed to Redis queue
+-Pushed to Redis queue
 
-Processed by background workers
+-Processed by background workers
 
-Job status persisted
+-Job status persisted
 
-Supports retries and failure handling
+-Supports retries and failure handling
+---
 
-Logging & Observability
+## Logging & Observability
 
-MongoDB stores:
+-MongoDB stores:
 
-Authentication logs
+-Authentication logs
 
-Project actions
+-Project actions
 
-Job lifecycle events
+-Job lifecycle events
 
-Enables high-volume writes and flexible querying
+-Enables high-volume writes and flexible querying
 
-Vercel Limitations 
+---
 
-Due to the serverless nature of Vercel:
+## Vercel Limitations 
 
-Persistent WebSocket connections are not supported
+-Due to the serverless nature of Vercel:
 
-Background workers and long-running processes cannot run continuously
+-Persistent WebSocket connections are not supported
 
-Stateful services (Redis, MongoDB, PostgreSQL, WebSockets) are not deployed on Vercel
+-Background workers and long-running processes cannot run continuously
 
-To address this:
+-Stateful services (Redis, MongoDB, PostgreSQL, WebSockets) are not deployed on Vercel
 
-REST APIs are deployed on Vercel
+-To address this:
 
-Real-time collaboration, background jobs, and databases are demonstrated via Docker-based deployments
+-REST APIs are deployed on Vercel
 
-This hybrid approach balances serverless scalability with stateful backend requirements.
+-Real-time collaboration, background jobs, and databases are demonstrated via Docker-based deployments
+
+-This hybrid approach balances serverless scalability with stateful backend requirements.
 
 
