@@ -6,14 +6,11 @@ const healthRoutes = require("./routes/health.routes");
 const authRoutes = require("./modules/auth/auth.routes");
 const projectRoutes = require("./modules/projects/projects.routes");
 const jobRoutes = require("./modules/jobs/jobs.routes");
-const requestLogger = require("./middlewares/requestLogger");
 
 const app = express();
 
-
 app.use(express.json());
 app.use(helmet());
-app.use(requestLogger);
 
 app.use(
   cors({
@@ -22,22 +19,15 @@ app.use(
   })
 );
 
-
-
-
-console.log("Health routes loaded");
-
-app.get("/test", (req, res) => {
-  res.send("TEST OK");
-});
-
-
-
+// routes
 app.use("/api/health", healthRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/jobs", jobRoutes);
 
+// 404
+app.use((req, res) => {
+  res.status(404).json({ message: "Route not found" });
+});
+
 module.exports = app;
-
-

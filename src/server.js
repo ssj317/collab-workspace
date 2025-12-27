@@ -3,20 +3,22 @@ const app = require("./app");
 const initSocket = require("./socket/socket");
 const { PORT } = require("./config/env");
 const connectMongo = require("./config/mongo");
+const requestLogger = require("./middlewares/requestLogger");
 
-// Initialize DBs
+// DBs (Docker / local only)
 require("./config/postgres");
 require("./config/redis");
 connectMongo();
 
 
-// Create HTTP server manually
+app.use(requestLogger);
+
+// create server
 const server = http.createServer(app);
 
-// Attach WebSocket to same server
+// attach sockets
 initSocket(server);
 
-// Start server
 server.listen(PORT, () => {
   console.log(` Server + WebSocket running on http://localhost:${PORT}`);
 });
