@@ -85,27 +85,27 @@ collab-backend/
 
 
 ## Environment Variables
-
 PORT=5000
 
-PostgreSQL
+# PostgreSQL
 PG_HOST=localhost
 PG_PORT=5432
 PG_USER=postgres
 PG_PASSWORD=your_password
 PG_DATABASE=collab_workspace
 
-Redis
+# Redis
 REDIS_HOST=localhost
 REDIS_PORT=6379
 
-MongoDB
+# MongoDB
 MONGO_URI=mongodb://localhost:27017/collab_logs
 MONGO_DB=collab_logs
 
-JWT
+# JWT
 JWT_SECRET=your_secret_key
 JWT_EXPIRES_IN=15m
+
 
 ---
 
