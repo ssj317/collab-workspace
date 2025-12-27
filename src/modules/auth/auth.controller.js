@@ -1,6 +1,6 @@
 const { registerUser, loginUser } = require("./auth.service");
 const { validationResult } = require("express-validator");
-const { logEvent } = require("../logs/logger");
+const { logEvent } = require("../../logs/logger");
 
 exports.register = async (req, res) => {
   const errors = validationResult(req);

@@ -1,5 +1,5 @@
 const service = require("./projects.service");
-const { logEvent } = require("../logs/logger");
+const { logEvent } = require("../../logs/logger");
 
 exports.createProject = async (req, res) => {
   try {

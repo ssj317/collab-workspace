@@ -1,5 +1,5 @@
 const service = require("./jobs.service");
-const { logEvent } = require("../logs/logger");
+const { logEvent } = require("../../logs/logger");
 
 exports.createJob = async (req, res) => {
   try {

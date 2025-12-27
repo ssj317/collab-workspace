@@ -6,7 +6,7 @@ const healthRoutes = require("./routes/health.routes");
 const authRoutes = require("./modules/auth/auth.routes");
 const projectRoutes = require("./modules/projects/projects.routes");
 const jobRoutes = require("./modules/jobs/jobs.routes");
-const requestLogger = require("./middleware/requestLogger");
+const requestLogger = require("./middlewares/requestLogger");
 
 const app = express();
 
