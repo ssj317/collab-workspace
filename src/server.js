@@ -2,10 +2,13 @@ const http = require("http");
 const app = require("./app");
 const initSocket = require("./socket/socket");
 const { PORT } = require("./config/env");
+const connectMongo = require("./config/mongo");
 
 // Initialize DBs
 require("./config/postgres");
 require("./config/redis");
+connectMongo();
+
 
 // Create HTTP server manually
 const server = http.createServer(app);

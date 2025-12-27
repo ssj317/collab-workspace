@@ -6,12 +6,14 @@ const healthRoutes = require("./routes/health.routes");
 const authRoutes = require("./modules/auth/auth.routes");
 const projectRoutes = require("./modules/projects/projects.routes");
 const jobRoutes = require("./modules/jobs/jobs.routes");
+const requestLogger = require("./middleware/requestLogger");
 
 const app = express();
 
 
 app.use(express.json());
 app.use(helmet());
+app.use(requestLogger);
 
 app.use(
   cors({

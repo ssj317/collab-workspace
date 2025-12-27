@@ -13,4 +13,8 @@ module.exports = {
     host: process.env.REDIS_HOST,
     port: process.env.REDIS_PORT,
   },
+   MONGO: {
+    uri: process.env.MONGO_URI,
+    dbName: process.env.MONGO_DB || "collab_logs",
+  },
 };
