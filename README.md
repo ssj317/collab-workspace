@@ -89,23 +89,23 @@ collab-backend/
 PORT=5000
 
 PostgreSQL
--PG_HOST=localhost
--PG_PORT=5432
--PG_USER=postgres
--PG_PASSWORD=your_password
--PG_DATABASE=collab_workspace
+PG_HOST=localhost
+PG_PORT=5432
+PG_USER=postgres
+PG_PASSWORD=your_password
+PG_DATABASE=collab_workspace
 
 Redis
--REDIS_HOST=localhost
--REDIS_PORT=6379
+REDIS_HOST=localhost
+REDIS_PORT=6379
 
 MongoDB
--MONGO_URI=mongodb://localhost:27017/collab_logs
--MONGO_DB=collab_logs
+MONGO_URI=mongodb://localhost:27017/collab_logs
+MONGO_DB=collab_logs
 
 JWT
--JWT_SECRET=your_secret_key
--JWT_EXPIRES_IN=15m
+JWT_SECRET=your_secret_key
+JWT_EXPIRES_IN=15m
 
 ---
 
